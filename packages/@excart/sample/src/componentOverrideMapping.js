@@ -4,5 +4,6 @@
  */
 
 module.exports = componentOverride = {
-    [`@magento/venia-ui/lib/components/Header/header.js`]: '@excart/sample/src/overrides/Header/header.js'
+    [`@magento/venia-ui/lib/components/Header/header.js`]: '@excart/sample/src/overrides/Header/header.js',
+    [`@magento/venia-ui/lib/components/Footer/footer.js`]: './packages/@excart/sample/src/overrides/Footer/footer.js',
 };
