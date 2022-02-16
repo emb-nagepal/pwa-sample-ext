@@ -16,4 +16,13 @@
          */
         flags[targets.name] = {esModules: true, cssModules: true};
     });
+    targets.of('@magento/venia-ui').routes.tap(
+        routesArray => {
+            routesArray.push({
+                name: "MyGreetingRoute",
+                pattern: "/greeting/:who?",
+                path: require.resolve("@excart/sample/src/components/GreetingPage/greetingPage.js"),
+            });
+        return routesArray;
+    });
 };
