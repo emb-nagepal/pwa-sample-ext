@@ -8,6 +8,10 @@
  * If you want to add overwrites for @magento/venia-ui components you can use
  * moduleOverrideWebpackPlugin and componentOverrideMapping
  */
+
+ const moduleOverrideWebpackPlugin = require('./moduleOverrideWebpackPlugin');
+ const componentOverrideMapping = require('./componentOverrideMapping')
+
  module.exports = targets => {
     targets.of('@magento/pwa-buildpack').specialFeatures.tap(flags => {
         /**
@@ -25,4 +29,8 @@
             });
         return routesArray;
     });
+
+    targets.of('@magento/pwa-buildpack').webpackCompiler.tap(compiler => {
+        new moduleOverrideWebpackPlugin(componentOverrideMapping).apply(compiler);
+    })
 };
