@@ -15,7 +15,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from '@magento/venia-ui/lib/components/Header/header.module.css';
 import StoreSwitcher from '@magento/venia-ui/lib/components/Header/storeSwitcher';
 import CurrencySwitcher from '@magento/venia-ui/lib/components/Header/currencySwitcher';
-import MegaMenu from '@magento/venia-ui/lib/components/MegaMenu';
+import MegaMenu from '../MegaMenu';
 import PageLoadingIndicator from '@magento/venia-ui/lib/components/PageLoadingIndicator';
 
 const SearchBar = React.lazy(() => import('@magento/venia-ui/lib/components/SearchBar'));
@@ -29,7 +29,7 @@ const Header = props => {
         searchRef,
         searchTriggerRef
     } = useHeader();
-
+    
     const classes = useStyle(defaultClasses, props.classes);
     const rootClass = isSearchOpen ? classes.open : classes.closed;
 
@@ -40,6 +40,7 @@ const Header = props => {
             </div>
         </div>
     );
+    /* 
     const searchBar = isSearchOpen ? (
         <Suspense fallback={searchBarFallback}>
             <Route>
@@ -47,10 +48,17 @@ const Header = props => {
             </Route>
         </Suspense>
     ) : null;
+     */
+    const searchBar = 
+        <Suspense fallback={searchBarFallback}>
+            <Route>
+                <SearchBar isOpen={true} ref={searchRef} />
+            </Route>
+        </Suspense>;
+  
 
     return (
-        <Fragment>
-            <div> SAMPLE HEADER UPDATE </div>
+        <Fragment> 
             <div className={classes.switchersContainer}>
                 <div className={classes.switchers}>
                     <StoreSwitcher />
@@ -71,9 +79,9 @@ const Header = props => {
                         className={classes.logoContainer}
                     >
                         <Logo classes={{ logo: classes.logo }} />
-                    </Link>
-                    <MegaMenu />
+                    </Link> 
                     <div className={classes.secondaryActions}>
+                    {searchBar}
                         <SearchTrigger
                             onClick={handleSearchTriggerClick}
                             ref={searchTriggerRef}
@@ -82,8 +90,10 @@ const Header = props => {
                         <CartTrigger />
                     </div>
                 </div>
-                {searchBar}
                 <PageLoadingIndicator absolute />
+                <div> 
+                <MegaMenu />
+                </div>
             </header>
         </Fragment>
     );

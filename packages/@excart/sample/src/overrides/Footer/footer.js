@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { shape, string } from 'prop-types';
 import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
 
-import Logo from '@magento/venia-ui/lib/components//Logo';
-import Newsletter from '@magento/venia-ui/lib/components//Newsletter';
+import Logo from '@magento/venia-ui/lib/components/Logo';
+import Newsletter from '@magento/venia-ui/lib/components/Newsletter';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './footer.module.css';
