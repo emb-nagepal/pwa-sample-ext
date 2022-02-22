@@ -9,7 +9,7 @@
     padding: 20px 10px;
     right: 0;
     top: 100%; 
-    background: #742afd;
+    background: rgb(var(--venia-global-color-blue-500));
 }
 
 .submenu::before {

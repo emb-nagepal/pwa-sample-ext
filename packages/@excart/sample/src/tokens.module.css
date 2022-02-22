@@ -98,12 +98,12 @@
 /* alias tokens */
 :global(:root) {
     /* colors */
-    --venia-brand-color-1-100: var(--venia-global-color-red-100);
-    --venia-brand-color-1-400: var(--venia-global-color-red-400);
-    --venia-brand-color-1-500: var(--venia-global-color-red-500);
-    --venia-brand-color-1-600: var(--venia-global-color-red-600);
-    --venia-brand-color-1-700: var(--venia-global-color-red-700);
-    --venia-brand-color-1-800: var(--venia-global-color-red-800);
+    --venia-brand-color-1-100: var(--venia-global-color-blue-100);
+    --venia-brand-color-1-400: var(--venia-global-color-blue-400);
+    --venia-brand-color-1-500: var(--venia-global-color-blue-500);
+    --venia-brand-color-1-600: var(--venia-global-color-blue-600);
+    --venia-brand-color-1-700: var(--venia-global-color-blue-700);
+    --venia-brand-color-1-800: var(--venia-global-color-blue-800);
 
     /* typography */
     /* heading */
