@@ -17,6 +17,7 @@ import StoreSwitcher from '@magento/venia-ui/lib/components/Header/storeSwitcher
 import CurrencySwitcher from '@magento/venia-ui/lib/components/Header/currencySwitcher';
 import MegaMenu from '../MegaMenu';
 import PageLoadingIndicator from '@magento/venia-ui/lib/components/PageLoadingIndicator';
+import MastHead from '../MastHead';
 
 const SearchBar = React.lazy(() => import('@magento/venia-ui/lib/components/SearchBar'));
 
@@ -59,6 +60,9 @@ const Header = props => {
 
     return (
         <Fragment> 
+            <div>
+                <MastHead />
+            </div>
             <div className={classes.switchersContainer}>
                 <div className={classes.switchers}>
                     <StoreSwitcher />

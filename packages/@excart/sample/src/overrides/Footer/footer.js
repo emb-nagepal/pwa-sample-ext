@@ -12,6 +12,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './footer.module.css';
 import { DEFAULT_LINKS, LOREM_IPSUM } from "@magento/venia-ui/lib/components/Footer/sampleData"; 
 
+
 const Footer = props => {
     const { links } = props;
     const classes = useStyle(defaultClasses, props.classes);
@@ -61,7 +62,7 @@ const Footer = props => {
                 <h5>Additional Links</h5>
                 <div>
                     <Link to="/greeting/world">
-                    <span className={classes.label}>Greetings page</span>
+                    <span className={classes.label}>Greetings  </span>
                     </Link>
                 </div>
                 <div>
@@ -113,10 +114,11 @@ const Footer = props => {
                     </li>
                 </ul>
                 <p className={classes.copyright}>{copyrightText || null}</p>
-                <Link className={classes.logo} to="/">
+                {/* <Link className={classes.logo} to="/">
                     <Logo />
-                </Link>
+                </Link> */}
             </div>
+            
         </footer>
     );
 };
