@@ -9,6 +9,6 @@
 /* Large screen styles */
 .megaMenu {
     composes: lg_flex from global;
-    background: rgb(var(--venia-global-color-blue-500));
+    background: rgb(var(--venia-global-color-voilet-100));
     color: white;
 }

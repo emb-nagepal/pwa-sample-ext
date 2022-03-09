@@ -12,13 +12,16 @@ import { useHeader } from '@magento/peregrine/lib/talons/Header/useHeader';
 import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import defaultClasses from '@magento/venia-ui/lib/components/Header/header.module.css';
+import defaultClasses from './header.module.css';
 import StoreSwitcher from '@magento/venia-ui/lib/components/Header/storeSwitcher';
 import CurrencySwitcher from '@magento/venia-ui/lib/components/Header/currencySwitcher';
 import MegaMenu from '../MegaMenu';
 import PageLoadingIndicator from '@magento/venia-ui/lib/components/PageLoadingIndicator';
+import Pincode from './pincode';
+import Country from './country';
 
 const SearchBar = React.lazy(() => import('@magento/venia-ui/lib/components/SearchBar'));
+
 
 const Header = props => {
     const {
@@ -80,12 +83,16 @@ const Header = props => {
                     >
                         <Logo classes={{ logo: classes.logo }} />
                     </Link> 
+                    
                     <div className={classes.secondaryActions}>
+                    <Pincode />
+                    <Country />
                     {searchBar}
                         <SearchTrigger
                             onClick={handleSearchTriggerClick}
                             ref={searchTriggerRef}
                         />
+
                         <AccountTrigger />
                         <CartTrigger />
                     </div>

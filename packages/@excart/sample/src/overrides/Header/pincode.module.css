@@ -1,0 +1,10 @@
+.modal {
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    bottom: 100px;
+    background-color: red;
+
+  }
+  

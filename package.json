@@ -28,8 +28,14 @@
     "@magento/venia-drivers": "src/drivers"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@excart/sample": "link:./packages/@excart/sample",
     "@magento/pwa-buildpack": "~11.1.0",
-    "@excart/sample": "link:./packages/@excart/sample"
+    "@reach/dialog": "^0.16.2",
+    "@reach/utils": "^0.16.0",
+    "@reach/visually-hidden": "^0.16.0",
+    "antd": "^4.19.1",
+    "react-modal": "^3.14.4"
   },
   "devDependencies": {
     "@adobe/apollo-link-mutation-queue": "~1.0.2",
